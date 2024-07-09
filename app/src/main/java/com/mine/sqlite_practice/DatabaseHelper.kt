@@ -48,9 +48,9 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(context, DATABASE_NAME,
             val content =cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_CONTENT))
 
             notesList.add(Note(id,title,content))
-            cursor.close()
-            db.close()
         }
+        cursor.close()
+        db.close()
         return notesList
     }
 
