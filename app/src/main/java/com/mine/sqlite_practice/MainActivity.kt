@@ -38,6 +38,13 @@ class MainActivity : AppCompatActivity() {
                 noteToUpdate.title = "Corrected at index 0 so it should be id 1 "
                 noteToUpdate.content = "corrected  one =)"
                 db.updateNote(noteToUpdate)
+                val notesList2 =  db.getAllNotes()
+                Log.e("all notes list","$notesList2")
+
+                db.deleteNote(noteToUpdate.id)
+                val notesList3 =  db.getAllNotes()
+                Log.e("all notes list","$notesList3")
+
             }
         }
     }
