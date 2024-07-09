@@ -31,5 +31,13 @@
         app:layout_constraintTop_toBottomOf="@+id/content_et"
         android:layout_marginTop="40dp"/>
 
+    <Button
+        android:id="@+id/get_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="get all Notes"
+        app:layout_constraintTop_toBottomOf="@+id/save_btn"
+        android:layout_marginTop="40dp"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
