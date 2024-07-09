@@ -34,7 +34,16 @@ class MainActivity : AppCompatActivity() {
             getBtn.setOnClickListener{
                 val notesList =  db.getAllNotes()
                 Log.e("all notes list","$notesList")
+                val noteToUpdate = notesList[0]
+                noteToUpdate.title = "Corrected at index 0 so it should be id 1 "
+                noteToUpdate.content = "corrected  one =)"
+                db.updateNote(noteToUpdate)
             }
         }
+    }
+
+    override fun onStop() {
+        db.close()
+        super.onStop()
     }
 }
